@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quiz Generator</h1>
+        </header>
+        
+        <main>
+            <div id="start-screen" class="screen active">
+                <p>Test your knowledge with our interactive quiz!</p>
+                <button id="start-btn" class="btn btn-primary">Start Quiz</button>
+            </div>
+            
+            <div id="quiz-screen" class="screen">
+                <div class="question-container">
+                    <div class="quiz-header">
+                        <div class="question-number">
+                            <span id="current-question">1</span> of <span id="total-questions">5</span>
+                        </div>
+                        <div class="timer-container">
+                            <div class="timer-circle">
+                                <span id="timer-text">10</span>
+                            </div>
+                            <div class="timer-label">seconds left</div>
+                        </div>
+                    </div>
+                    <h2 id="question-text"></h2>
+                    <div id="options-container" class="options-container">
+                        <!-- Options will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+            
+            <div id="result-screen" class="screen">
+                <h2>Quiz Complete!</h2>
+                <div class="score-container">
+                    <div class="score-display">
+                        Your Score: <span id="final-score">0</span> out of <span id="total-score">5</span>
+                    </div>
+                    <div class="score-percentage">
+                        <span id="percentage">0</span>%
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button id="review-btn" class="btn btn-secondary">Review Answers</button>
+                    <button id="restart-btn" class="btn btn-primary">Take Quiz Again</button>
+                </div>
+            </div>
+            
+            <div id="review-screen" class="screen">
+                <h2>Answer Review</h2>
+                <div id="review-container" class="review-container">
+                    <!-- Review items will be dynamically inserted here -->
+                </div>
+                <div class="action-buttons">
+                    <button id="back-to-results-btn" class="btn btn-secondary">Back to Results</button>
+                    <button id="restart-from-review-btn" class="btn btn-primary">Take Quiz Again</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
